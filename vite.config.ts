@@ -19,6 +19,7 @@ export default defineConfig({
       dts: 'src/auto-imports.d.ts',
     }),
     Components({
+      directoryAsNamespace: true,
       resolvers: [AntDesignVueResolver({ resolveIcons: true })],
       dts: 'src/components.d.ts',
     }),
