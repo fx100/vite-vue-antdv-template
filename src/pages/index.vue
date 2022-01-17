@@ -6,10 +6,6 @@ function add() {
 }
 
 const { x, y } = $(useMouse())
-
-watchEffect(() => {
-  console.log(`鼠标位置: (${x}, ${y})`)
-})
 </script>
 
 <template>

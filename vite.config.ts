@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import eslint from '@nabla/vite-plugin-eslint'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   plugins: [
@@ -18,6 +19,7 @@ export default defineConfig({
       dts: 'src/auto-imports.d.ts',
     }),
     Components({
+      resolvers: [AntDesignVueResolver({ resolveIcons: true })],
       dts: 'src/components.d.ts',
     }),
   ],

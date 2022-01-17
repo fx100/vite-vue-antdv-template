@@ -1,6 +1,10 @@
-# vite-vue-template
+# vite-vue-antdv-template
 
-一个vue3项目模板
+一个 vue3 + ant-design-vue3 项目模板
+
+- 对 a-modal 二次封装支持拖拽移动，同时保留 a-modal 的全部特性
+
+[不带 ant-design-vue 版本点此](https://github.com/fx100/vite-vue-antdv-template)
 
 ## 主要依赖
 
@@ -9,6 +13,7 @@
 - typescript
 - eslint
 - prettier
+- ant-design-vue `3.x.x`
 
 ## 准备
 
