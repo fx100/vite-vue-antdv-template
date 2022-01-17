@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import { nanoid } from 'nanoid'
 /**
  * template 中的 a-modal class="vB-gWURJj6yaDCJAqHcLo" 说明
  * 因为 a-modal 的dom和当前组件dom并不在同一颗树上 style scoped + deep 的方式无法使用
  * vB-gWURJj6yaDCJAqHcLo是使用nanoid生成的全局唯一class以保证全局css不受污染
  */
+import { nanoid } from 'nanoid'
 
 const attrs = useAttrs()
 const props = defineProps<{
   visible?: boolean
+  height?: string | number
 }>()
 const emit = defineEmits<{
   (e: 'update:visible', visible: boolean): void
@@ -43,6 +44,7 @@ const style = computed(() => {
     return {}
   }
   return {
+    height: props.height,
     left: `${x}px`,
     top: `${y}px`,
     transformOrigin: `${originX - x}px ${originY - y}px`,
@@ -109,9 +111,9 @@ watchEffect(async () => {
   <a-modal
     v-model:visible="visible"
     v-bind="attrs"
-    wrap-class-name="vB-gWURJj6yaDCJAqHcLo"
-    :class="{ draggable: isReady, [id]: true }"
+    :class="{ [id]: true, draggable: isReady, 'body-scroll': !!props.height }"
     :style="style"
+    wrap-class-name="vB-gWURJj6yaDCJAqHcLo"
   >
     <slot />
   </a-modal>
@@ -132,6 +134,18 @@ watchEffect(async () => {
       .ant-modal-header {
         user-select: none;
         cursor: move;
+      }
+    }
+    &.body-scroll {
+      .ant-modal-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .ant-modal-body {
+          flex: 1;
+          height: 100%;
+          overflow: auto;
+        }
       }
     }
   }
