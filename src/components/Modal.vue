@@ -85,6 +85,8 @@ watchEffect(async () => {
       modalSizeEl = document.createElement('div')
       modalSizeEl.style.width = '100%'
       modalSizeEl.style.height = '100%'
+      modalSizeEl.style.opacity = '0'
+      modalSizeEl.style.pointerEvents = 'none'
       modalEl.parentNode?.appendChild(modalSizeEl)
     }
     modalHeaderEl = modalEl.getElementsByClassName(
