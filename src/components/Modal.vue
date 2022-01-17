@@ -99,7 +99,7 @@ watchEffect(async () => {
     await nextTick()
     const [transformOriginX, transformOriginY] = modalEl.style.transformOrigin
       .split(' ')
-      .map(parseInt)
+      .map((str) => parseInt(str, 10))
     originX = x + transformOriginX
     originY = y + transformOriginY
     isReady = true
