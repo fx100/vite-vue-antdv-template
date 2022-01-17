@@ -123,6 +123,8 @@ watchEffect(async () => {
 .vB-gWURJj6yaDCJAqHcLo {
   overflow-x: hidden;
   .ant-modal {
+    // body 区域最小高度为 48px
+    min-height: 156px;
     // 默认：max-width: calc(100vw - 32px);
     max-width: 100%;
     &.draggable {
