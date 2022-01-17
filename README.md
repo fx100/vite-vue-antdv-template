@@ -4,7 +4,7 @@
 
 - 对 a-modal 二次封装支持拖拽移动，同时保留 a-modal 的全部特性
 
-[不带 ant-design-vue 版本点此](https://github.com/fx100/vite-vue-antdv-template)
+[不带 ant-design-vue 版本点此](https://github.com/fx100/vite-vue-template)
 
 ## 主要依赖
 
