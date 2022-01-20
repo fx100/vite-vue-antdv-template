@@ -9,6 +9,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.0.0
   '@vueuse/core': ^7.5.3
   ant-design-vue: ^3.0.0-beta.7
+  dayjs: ^1.10.7
   eslint: ^8.6.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^4.0.0
@@ -28,6 +29,7 @@ dependencies:
   '@ant-design/icons-vue': 6.0.1_vue@3.2.26
   '@vueuse/core': 7.5.3_vue@3.2.26
   ant-design-vue: 3.0.0-beta.7_vue@3.2.26
+  dayjs: 1.10.7
   nanoid: 3.2.0
   vue: 3.2.26
   vue-router: 4.0.12_vue@3.2.26
