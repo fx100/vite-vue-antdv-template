@@ -13,6 +13,10 @@ const routes = [
         path: 'modal',
         component: () => import('~/pages/examples/modal.vue'),
       },
+      {
+        path: 'form',
+        component: () => import('~/pages/examples/form.vue'),
+      },
     ],
   },
 ]
