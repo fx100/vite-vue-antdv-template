@@ -28,7 +28,7 @@ const valueComputed = $computed<[Dayjs, Dayjs] | undefined>(() =>
   start && end ? [dayjs(start), dayjs(end)] : undefined,
 )
 
-function handleUpdateMember(newDayjsObj: Dayjs | string | null, index: number) {
+function handleUpdateMember(newDayjsObj: Dayjs | string, index: number) {
   if (index === 0) {
     // start
     let obj = newDayjsObj
@@ -68,8 +68,13 @@ function handleUpdateMember(newDayjsObj: Dayjs | string | null, index: number) {
   }
 }
 
-function handleUpdate(arr: Array<Dayjs | string | null>) {
-  arr?.forEach(handleUpdateMember)
+function handleUpdate(arr: [Dayjs | string, Dayjs | string] | null) {
+  if (arr) {
+    arr?.forEach(handleUpdateMember)
+  } else {
+    start = undefined
+    end = undefined
+  }
 }
 </script>
 
