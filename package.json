@@ -13,6 +13,7 @@
     "ant-design-vue": "^3.0.0-beta.9",
     "axios": "^0.25.0",
     "dayjs": "^1.10.7",
+    "nanobus": "^4.5.0",
     "nanoid": "^3.2.0",
     "vue": "^3.2.30",
     "vue-request": "^1.2.4",
