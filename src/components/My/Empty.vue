@@ -15,5 +15,5 @@ const props = defineProps<{
 </script>
 
 <template>
-  <a-empty :image="Empty.PRESENTED_IMAGE_SIMPLE" v-bind="props" />
+  <a-empty v-bind="props" :image="Empty.PRESENTED_IMAGE_SIMPLE" />
 </template>
