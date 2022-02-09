@@ -1,5 +1,5 @@
 {
-  "name": "vite-vue-template",
+  "name": "vite-vue-antdv-template",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
