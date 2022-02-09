@@ -9,4 +9,12 @@ dayjs.locale('zh-cn')
 import 'ant-design-vue/es/message/style/css'
 import 'ant-design-vue/es/notification/style/css'
 
+import { setGlobalOptions } from 'vue-request'
+setGlobalOptions({
+  pagination: {
+    currentKey: 'page',
+    pageSizeKey: 'page_size',
+  },
+})
+
 createApp(App).use(router).mount('#app')
