@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios, { AxiosRequestConfig } from 'axios'
 import { getToken } from '~/composables/useToken'
 
 const request = axios.create({
@@ -21,9 +21,14 @@ request.interceptors.request.use(
 
 request.interceptors.response.use(
   (response) => {
-    return response.data
+    const data = response.data
+    if (data.code !== 0) {
+      return Promise.reject(new Error(data?.message || data))
+    }
+    return data?.data || data
   },
   (error) => Promise.reject(error),
 )
 
-export default request
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default request as (config: AxiosRequestConfig<any>) => Promise<any>
