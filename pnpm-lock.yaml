@@ -15,6 +15,7 @@ specifiers:
   eslint-plugin-vue: ^8.5.0
   fonts.css: ^2.0.0
   lodash: ^4.17.21
+  nanoid: ^3.3.1
   normalize.css: ^8.0.1
   prettier: ^2.5.1
   sass: ^1.49.9
@@ -34,6 +35,7 @@ dependencies:
   ant-design-vue: 3.0.0-beta.13_vue@3.2.31
   fonts.css: 2.0.0
   lodash: 4.17.21
+  nanoid: 3.3.1
   normalize.css: 8.0.1
   vue: 3.2.31
   vue-router: 4.0.13_vue@3.2.31
