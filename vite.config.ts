@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import eslint from 'vite-plugin-eslint'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, __dirname)
@@ -26,7 +27,14 @@ export default defineConfig(({ mode }) => {
         fix: true,
       }),
       AutoImport({
-        imports: ['vue', 'vue-router', '@vueuse/core'],
+        imports: [
+          'vue',
+          'vue-router',
+          '@vueuse/core',
+          {
+            'ant-design-vue/es': ['message', 'notification'],
+          },
+        ],
         eslintrc: {
           enabled: true,
           filepath: './.eslintrc-auto-import.json',
@@ -35,6 +43,7 @@ export default defineConfig(({ mode }) => {
         dts: 'src/auto-imports.d.ts',
       }),
       Components({
+        resolvers: [AntDesignVueResolver()],
         dts: 'src/components.d.ts',
       }),
     ],
