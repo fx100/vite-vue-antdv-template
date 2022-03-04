@@ -1,0 +1,6 @@
+@import 'normalize.css';
+@import 'fonts.css/dist/fonts.scss';
+
+body {
+  @include font-hei;
+}
