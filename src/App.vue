@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import zhCN from 'ant-design-vue/es/locale/zh_CN'
+
 const router = useRouter()
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -8,9 +10,11 @@ function select({ key }: any) {
 </script>
 
 <template>
-  <a-menu @select="select" mode="horizontal" :selected-keys="[$route.path]">
-    <a-menu-item key="/">首页</a-menu-item>
-    <a-menu-item key="/modal-demo">弹窗 Demo</a-menu-item>
-  </a-menu>
-  <router-view />
+  <a-config-provider :locale="zhCN">
+    <a-menu @select="select" mode="horizontal" :selected-keys="[$route.path]">
+      <a-menu-item key="/">首页</a-menu-item>
+      <a-menu-item key="/modal-demo">弹窗 Demo</a-menu-item>
+    </a-menu>
+    <router-view />
+  </a-config-provider>
 </template>
