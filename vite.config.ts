@@ -33,6 +33,7 @@ export default defineConfig(({ mode }) => {
           '@vueuse/core',
           {
             'ant-design-vue/es': ['message', 'notification'],
+            'ant-design-vue/es/form': ['useForm'],
           },
         ],
         eslintrc: {
