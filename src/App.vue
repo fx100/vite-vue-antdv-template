@@ -11,15 +11,29 @@ function select({ key }: any) {
 
 <template>
   <a-config-provider :locale="zhCN">
-    <a-menu
-      :selected-keys="[$route.path]"
-      theme="dark"
-      mode="horizontal"
-      @select="select"
-    >
-      <a-menu-item key="/">首页</a-menu-item>
-      <a-menu-item key="/modal-demo">弹窗 Demo</a-menu-item>
-    </a-menu>
-    <router-view />
+    <div class="nav">
+      <a-menu
+        :selected-keys="[$route.path]"
+        theme="dark"
+        mode="horizontal"
+        @select="select"
+      >
+        <a-menu-item key="/">首页</a-menu-item>
+        <a-menu-item key="/modal-demo">弹窗 Demo</a-menu-item>
+      </a-menu>
+    </div>
+    <div class="view">
+      <router-view />
+    </div>
   </a-config-provider>
 </template>
+
+<style scoped lang="scss">
+.nav {
+  position: sticky;
+  top: 0;
+}
+.view {
+  padding: 24px;
+}
+</style>
