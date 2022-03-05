@@ -1,3 +1,3 @@
 <template>
-  <h1>Home</h1>
+  <a-typography-title>首页</a-typography-title>
 </template>
