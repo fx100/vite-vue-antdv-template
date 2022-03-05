@@ -32,6 +32,7 @@ export default defineConfig(({ mode }) => {
           'vue-router',
           '@vueuse/core',
           {
+            lodash: [['default', '_']],
             'ant-design-vue/es': ['message', 'notification'],
             'ant-design-vue/es/form': ['useForm'],
           },
