@@ -9,7 +9,12 @@ interface Props {
   wrap?: boolean
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  align: undefined,
+  gutter: undefined,
+  justify: undefined,
+  wrap: undefined,
+})
 
 const breakpoints = (
   [

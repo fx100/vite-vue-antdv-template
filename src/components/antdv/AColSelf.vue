@@ -17,7 +17,21 @@ interface Props {
   xxxl?: number | Props
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  flex: undefined,
+  offset: undefined,
+  order: undefined,
+  pull: undefined,
+  push: undefined,
+  span: undefined,
+  xs: undefined,
+  sm: undefined,
+  md: undefined,
+  lg: undefined,
+  xl: undefined,
+  xxl: undefined,
+  xxxl: undefined,
+})
 
 const breakpointMatchList = inject(breakpointMatchListKey)
 
