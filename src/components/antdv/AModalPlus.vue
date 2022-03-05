@@ -119,11 +119,9 @@ watchEffect(async () => {
 </template>
 
 <style lang="scss">
-/**
- * 因为a-modal的 实际dom 是挂载到 body 下的 style scoped + v-deep 的方式无法使用
- * 只能使用 全局css + 全局唯一className 的方式保证 css 不污染其他元素
- * S9UDf2YCOBi0KGmKOXawv 是使用 nanoid 生产的一个唯一ID
- */
+// 因为a-modal的 实际dom 是挂载到 body 下的 style scoped + v-deep 的方式无法使用
+// 只能使用 全局css + 全局唯一className 的方式保证 css 不污染其他元素
+// S9UDf2YCOBi0KGmKOXawv 是使用 nanoid 生产的一个唯一ID
 .S9UDf2YCOBi0KGmKOXawv {
   overflow: hidden;
   .ant-modal {
