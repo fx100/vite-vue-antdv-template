@@ -20,6 +20,7 @@ function select({ key }: any) {
       >
         <a-menu-item key="/">首页</a-menu-item>
         <a-menu-item key="/modal-demo">弹窗 Demo</a-menu-item>
+        <a-menu-item key="/grid-demo">栅格 Demo</a-menu-item>
       </a-menu>
     </div>
     <div class="view">

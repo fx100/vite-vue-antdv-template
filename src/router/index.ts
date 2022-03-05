@@ -11,6 +11,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/modal-demo',
     component: () => import('~/views/ModalDemoView.vue'),
   },
+  {
+    path: '/grid-demo',
+    component: () => import('~/views/GridDemoView.vue'),
+  },
 ]
 
 const router = createRouter({
