@@ -10,6 +10,7 @@ function select({ key }: any) {
 <template>
   <a-menu @select="select" mode="horizontal" :selected-keys="[$route.path]">
     <a-menu-item key="/">首页</a-menu-item>
+    <a-menu-item key="/modal-demo">弹窗 Demo</a-menu-item>
   </a-menu>
   <router-view />
 </template>

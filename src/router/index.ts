@@ -7,6 +7,10 @@ const routes: Array<RouteRecordRaw> = [
     name: 'home',
     component: () => import('~/views/HomeView.vue'),
   },
+  {
+    path: '/modal-demo',
+    component: () => import('~/views/ModalDemoView.vue'),
+  },
 ]
 
 const router = createRouter({
