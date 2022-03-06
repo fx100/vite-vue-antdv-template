@@ -31,7 +31,7 @@ function select({ key }: any) {
 
 <style scoped lang="scss">
 .nav {
-  z-index: 10000;
+  z-index: 100;
   position: sticky;
   top: 0;
 }
